@@ -20,7 +20,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 14282,
   "graphTooltip": 0,
-  "id": 3,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -181,7 +180,7 @@
         ]
       },
       "gridPos": {
-        "h": 11,
+        "h": 10,
         "w": 24,
         "x": 0,
         "y": 1
@@ -193,7 +192,9 @@
           "countRows": false,
           "enablePagination": false,
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true,
@@ -268,7 +269,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 11
       },
       "id": 20,
       "title": "CPU & Memory",
@@ -313,7 +314,7 @@
             "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "normal"
+              "mode": "none"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -341,12 +342,15 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 12
       },
       "id": 15,
       "options": {
         "legend": {
-          "calcs": ["mean", "max"],
+          "calcs": [
+            "min",
+            "max"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -442,12 +446,15 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 12
       },
       "id": 9,
       "options": {
         "legend": {
-          "calcs": ["max", "min"],
+          "calcs": [
+            "min",
+            "max"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -483,7 +490,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 20
       },
       "id": 19,
       "repeat": "Filters",
@@ -555,12 +562,15 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 22
+        "y": 21
       },
       "id": 4,
       "options": {
         "legend": {
-          "calcs": ["mean", "max"],
+          "calcs": [
+            "min",
+            "max"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -653,12 +663,15 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 22
+        "y": 21
       },
       "id": 6,
       "options": {
         "legend": {
-          "calcs": ["mean", "max"],
+          "calcs": [
+            "min",
+            "max"
+          ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
@@ -691,7 +704,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 29
       },
       "id": 18,
       "title": "Sigma",
@@ -762,7 +775,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 31
+        "y": 30
       },
       "id": 23,
       "links": [],
@@ -947,7 +960,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 31
+        "y": 30
       },
       "id": 24,
       "links": [],
@@ -1100,7 +1113,9 @@
               "id": "byNames",
               "options": {
                 "mode": "exclude",
-                "names": ["go_memstats_stack_inuse_bytes"],
+                "names": [
+                  "go_memstats_stack_inuse_bytes"
+                ],
                 "prefix": "All except:",
                 "readOnly": true
               }
@@ -1122,7 +1137,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 39
+        "y": 38
       },
       "id": 25,
       "links": [],
@@ -1222,7 +1237,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 39
+        "y": 38
       },
       "id": 27,
       "links": [],
@@ -1305,7 +1320,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1321,7 +1337,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 47
+        "y": 46
       },
       "id": 28,
       "links": [],
@@ -1403,7 +1419,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1419,7 +1436,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 47
+        "y": 46
       },
       "id": 26,
       "links": [],
@@ -1462,13 +1479,13 @@
     "list": []
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "sigma",
   "uid": "pMEd7m0Mz",
-  "version": 18,
+  "version": 1,
   "weekStart": ""
 }
