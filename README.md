@@ -15,6 +15,18 @@ Visit: <https://sigma.tosone.cn>, username/password: sigma/Admin@123
 
 Status check here: [https://grafana.sigma.tosone.cn/public-dashboards/ebf12be7e7f44b59bfe4096f0f51ab88](https://grafana.sigma.tosone.cn/public-dashboards/ebf12be7e7f44b59bfe4096f0f51ab88)
 
+### Deploy Your Own Demo Server
+
+You can change the `.env` file and change these lines in `compose.yaml` with your own domain:
+
+``` yaml
+- traefik.http.routers.traefik.rule=Host(`traefik.sigma${HOST_DOMAIN}`)
+# ...
+- traefik.http.routers.sigma.rule=Host(`sigma${HOST_DOMAIN}`)
+# ...
+- traefik.http.routers.grafana.rule=Host(`grafana.sigma${HOST_DOMAIN}`)
+```
+
 ## Commands
 
 ``` bash

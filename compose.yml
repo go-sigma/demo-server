@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   traefik:
     hostname: traefik
@@ -51,7 +49,7 @@ services:
   sigma:
     hostname: sigma
     container_name: sigma
-    image: docker.io/tosone/sigma:nightly-alpine
+    image: docker.io/tosone/sigma:nightly-alpine-trivydb
     pull_policy: if_not_present
     restart: always
     command: ["sigma", "server"]

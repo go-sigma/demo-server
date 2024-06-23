@@ -27,8 +27,8 @@ redis:
   # redis type available: none, external
   # none: means never use redis
   # external: means use the specific redis instance
-  type: none
-  url: redis://:Admin@123@localhost:6379/0
+  type: external
+  url: redis://:Admin@123@redis:6379/0
 
 cache:
   # the cache type available is: redis, inmemory, database
