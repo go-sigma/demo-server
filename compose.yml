@@ -169,7 +169,11 @@ services:
       - ${PWD}/prometheus:/etc/prometheus
       - ${VOLUME_PREFIX}/prometheus:/prometheus
     healthcheck:
-      test: ["CMD", "wget", "http://localhost:9090"]
+      test:
+        [
+          "CMD-SHELL",
+          "wget -O - -q http://localhost:9090/-/healthy | grep -q 'Prometheus Server is Healthy'",
+        ]
       interval: 10s
       timeout: 5s
       retries: 10
